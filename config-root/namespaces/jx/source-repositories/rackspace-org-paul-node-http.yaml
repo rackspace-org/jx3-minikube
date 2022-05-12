@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: rackspace-org
+    provider: github
+    repository: paul-node-http
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: rackspace-org-paul-node-http
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/rackspace-org/paul-node-http.git
+  org: rackspace-org
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: paul-node-http
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/rackspace-org/paul-node-http
