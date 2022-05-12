@@ -14,7 +14,7 @@ spec:
     gitName: github
     gitServer: https://github.com
     provider: minikube
-    registry: 10.110.3.106
+    registry: 10.110.222.185
   environments:
   - key: dev
     owner: rackspace-org

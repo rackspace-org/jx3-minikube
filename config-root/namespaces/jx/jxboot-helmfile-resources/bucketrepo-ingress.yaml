@@ -19,4 +19,4 @@ spec:
                 name: bucketrepo
                 port:
                   number: 80
-      host: 1a72-106-196-13-124.ngrok.io
+      host: 20ad-2401-4900-3be6-c106-4c53-7783-429c-a208.ngrok.io

@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - rackspace-org/jx3-minikube
-      target_url: http://lighthouse-jx.192.168.59.116.nip.io/merge/status
+      target_url: http://lighthouse-jx.192.168.59.117.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
