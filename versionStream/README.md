@@ -4,7 +4,7 @@ This repository contains the versions of helm charts, images, git repositories, 
 
 See the documentation on [version streams](https://jenkins-x.io/about/concepts/version-stream/).
 
-The main directories are:
+The main directories are as below:
 
 * [charts](charts) for helm chart version and configuration files
 * [git](git) for git repositories
