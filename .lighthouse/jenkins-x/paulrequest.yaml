@@ -16,11 +16,20 @@ spec:
           resources: {}
           workingDir: /workspace/source
         steps:
-        - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-env-pr.yaml@versionStream
+        - name: make-pr
           resources: {}
-        #- name: make-pr
-        #  resources: {}
-  podTemplate: {}
+          args:
+            - pr
+          command:
+            - make
+  podTemplate:
+    dnsPolicy: "None"
+    dnsConfig:
+      nameservers:
+        - 8.8.8.8
+      options:
+        - name: ndots
+          value: "1"
   serviceAccountName: tekton-bot
   timeout: 12h0m0s
 status: {}
