@@ -37,11 +37,6 @@ spec:
             - needs-ok-to-test
             - needs-rebase
         review_approved_required: false
-  - name: paul
-    context: paul
-    always_run: true
-    optional: false
-    source: "paulrequest.yaml"
 
 
   postsubmits:
