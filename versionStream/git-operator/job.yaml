@@ -33,8 +33,6 @@ spec:
           volumeMounts:
             - mountPath: /workspace
               name: workspace-volume
-            - name: jx-boot-job-dns
-              mountPath: "/etc/resolv.conf"
           workingDir: /workspace
       containers:
         - args:
@@ -54,10 +52,14 @@ spec:
           volumeMounts:
             - mountPath: /workspace
               name: workspace-volume
-            - name: jx-boot-job-dns
-              mountPath: "/etc/resolv.conf"
           workingDir: /workspace/source
-      dnsPolicy: ClusterFirst
+      dnsPolicy: "None"
+      dnsConfig:
+        nameservers:
+          - 8.8.8.8
+        options:
+          - name: ndots
+            value: "1"
       restartPolicy: Never
       schedulerName: default-scheduler
       serviceAccountName: jx-boot-job
@@ -65,6 +67,3 @@ spec:
       volumes:
         - name: workspace-volume
           emptyDir: {}
-        - name: jx-boot-job-dns
-          configMap:
-            name: jx-boot-dns
